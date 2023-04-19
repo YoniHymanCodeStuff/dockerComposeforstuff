@@ -2,14 +2,14 @@ version: '3.8'
 
 services:
   angular-app:
-    build: ./angular-docker/angular-docker-demo
+    build: yonihyman/aspnet_demo:angular_demo
     ports:
       - "4200:80"
     depends_on:
       - dotnet-app
 
   dotnet-app:
-    build: ./dotnet-docker
+    build: yonihyman/aspnet_demo:aspnet_demo
     ports:
       - "5000:80"
 
